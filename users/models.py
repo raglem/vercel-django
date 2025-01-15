@@ -43,7 +43,7 @@ class PickupGame(models.Model):
     status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES, default=1)
 
     def __str__(self):
-        human_readable_date = self.date.strftime('%B %d, %Y at %I:%M %p UTC')
+        human_readable_date = self.date.strftime('%B %d, %Y at %I:%M %p')
         return f"Game at {self.location} on {human_readable_date}"
     
     def clean(self):
